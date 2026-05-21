@@ -747,7 +747,7 @@
             function resetOrderStateIfCartChanges() { if(orderCompleted && cart.length > 0) { orderCompleted = false; lastOrderData = null; if(prePaymentArea) prePaymentArea.style.display = 'block'; if(receiptFeedbackArea) receiptFeedbackArea.style.display = 'none'; showAlert("New items added – ready for fresh order"); } if(cart.length === 0 && orderCompleted) { orderCompleted = false; lastOrderData = null; if(prePaymentArea) prePaymentArea.style.display = 'block'; if(receiptFeedbackArea) receiptFeedbackArea.style.display = 'none'; } }
 
             function addToCart(flavor, size, unitPrice) {
-                if(orderCompleted) { showAlert("Previous order completed! Start fresh cart.", true); return; }
+                if(orderCompleted) { showAlert("Previous order completed! Refresh to start fresh cart.", true); return; }
                 const existing = cart.find(item => item.flavor === flavor && item.size === size);
                 if (existing) existing.quantity += 1;
                 else cart.push({ id: Date.now() + Math.random(), flavor, size, unitPrice, quantity: 1 });
