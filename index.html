@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Kings Atchar | Circular Logo · WhatsApp Green · Blue & Black</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ---------- WHITE · BLUE · BLACK THEME (WhatsApp green accent) ---------- */
+        :root {
+            --pure-white: #FFFFFF;
+            --pure-black: #000000;
+            --primary-blue: #1E3A8A;    /* deep royal blue */
+            --blue-light: #2563EB;
+            --blue-soft: #DBEAFE;
+            --whatsapp-green: #25D366;
+            --whatsapp-dark: #128C7E;
+            --gray-100: #F8FAFC;
+            --gray-200: #E2E8F0;
+            --gray-600: #475569;
+            --gray-800: #1E293B;
+            --shadow-sm: 0 4px 12px rgba(0,0,0,0.05);
+            --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+            --shadow-lg: 0 16px 32px rgba(0,0,0,0.12);
+            --transition: all 0.25s ease;
+            --font-head: 'Playfair Display', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--pure-white);
+            color: var(--gray-800);
+            font-family: var(--font-body);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 70px 0;
+        }
+
+        /* typography */
+        .title-sm {
+            display: block;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            margin-bottom: 12px;
+        }
+
+        .title-lg {
+            font-family: var(--font-head);
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--pure-black);
+            font-weight: 800;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 26px;
+            border-radius: 60px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+        }
+
+        .btn:active {
+            transform: scale(0.96);
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: white;
+            box-shadow: 0 2px 6px rgba(30,58,138,0.2);
+        }
+        .btn-primary:hover {
+            background: var(--blue-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background: var(--whatsapp-green);
+            color: white;
+            border: none;
+        }
+        .btn-whatsapp:hover {
+            background: var(--whatsapp-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+        .btn-outline:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-sm {
+            padding: 8px 18px;
+            font-size: 0.75rem;
+        }
+
+        /* navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray-200);
+            height: 75px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Logo with CIRCULAR image */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-head);
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: var(--pure-black);
+            text-decoration: none;
+        }
+        .logo-img {
+            height: 52px;
+            width: 52px;
+            object-fit: cover;
+            border-radius: 50%;          /* Circular logo */
+            border: 2px solid var(--primary-blue);
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+        .logo-img:hover {
+            transform: scale(1.02);
+        }
+        .logo-text {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 4px;
+        }
+        .logo-text span {
+            color: var(--primary-blue);
+            font-weight: 800;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
+        .nav-links a {
+            font-weight: 600;
+            color: var(--gray-800);
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-blue);
+            transition: var(--transition);
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cart-icon-wrapper {
+            position: relative;
+            cursor: pointer;
+            background: var(--blue-soft);
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 60px;
+            transition: var(--transition);
+        }
+        .cart-icon-wrapper:hover {
+            background: var(--gray-200);
+        }
+        .cart-count {
+            position: absolute;
+            top: -6px;
+            right: -8px;
+            background: var(--primary-blue);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 2px 7px;
+            border-radius: 30px;
+        }
+
+        /* HERO */
+        .hero {
+            padding-top: 130px;
+            padding-bottom: 70px;
+            background: var(--pure-white);
+            text-align: center;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .tag {
+            background: var(--blue-soft);
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            border: 1px solid rgba(30,58,138,0.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* product grid */
+        .flavor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+        .flavor-card {
+            background: var(--pure-white);
+            border-radius: 28px;
+            overflow: hidden;
+            border: 1px solid var(--gray-200);
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+        .flavor-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-blue);
+        }
+        .flavor-img {
+            height: 220px;
+            position: relative;
+            overflow: hidden;
+            background: var(--gray-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flavor-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .flavor-card:hover .flavor-img img {
+            transform: scale(1.03);
+        }
+        .flavor-badge {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: rgba(30,58,138,0.85);
+            backdrop-filter: blur(4px);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.7rem;
+            color: white;
+            letter-spacing: 0.3px;
+        }
+        .flavor-info {
+            padding: 22px 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .flavor-info h3 {
+            font-family: var(--font-head);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--pure-black);
+        }
+        .size-pills {
+            display: flex;
+            gap: 8px;
+            margin: 15px 0 18px;
+            background: var(--gray-100);
+            padding: 5px;
+            border-radius: 60px;
+        }
+        .pill {
+            flex: 1;
+            text-align: center;
+            padding: 8px 5px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--gray-600);
+            background: transparent;
+        }
+        .pill.active {
+            background: var(--primary-blue);
+            color: white;
+        }
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .price-tag {
+            font-size: 1.6rem;
+            font-weight: 800;
+            font-family: var(--font-head);
+            color: var(--primary-blue);
+        }
+
+        /* contact section */
+        .contact-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 0;
+            background: var(--pure-white);
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--gray-200);
+        }
+        .contact-info {
+            background: var(--primary-blue);
+            color: white;
+            padding: 48px;
+        }
+        .contact-info .title-lg {
+            color: white;
+        }
+        .contact-form {
+            padding: 48px;
+            background: white;
+        }
+        .form-input {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1.5px solid var(--gray-200);
+            border-radius: 20px;
+            font-family: inherit;
+            background: var(--pure-white);
+            color: var(--gray-800);
+        }
+        .form-input:focus {
+            border-color: var(--primary-blue);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(30,58,138,0.1);
+        }
+
+        /* modal cart */
+        .modal-cart {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.75);
+            backdrop-filter: blur(6px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            padding: 20px;
+        }
+        .modal-cart.active {
+            display: flex;
+        }
+        .cart-content {
+            background: white;
+            width: 100%;
+            max-width: 750px;
+            max-height: 85vh;
+            border-radius: 32px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--gray-200);
+        }
+        .cart-header {
+            padding: 20px 28px;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+        }
+        .cart-header h3 {
+            color: var(--primary-blue);
+        }
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px 28px;
+            background: var(--gray-100);
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--gray-200);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .item-name {
+            font-weight: 800;
+            color: var(--pure-black);
+        }
+        .qty-control {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: white;
+            padding: 4px 14px;
+            border-radius: 50px;
+            border: 1px solid var(--gray-200);
+        }
+        .qty-control button {
+            background: none;
+            border: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--primary-blue);
+        }
+        .cart-footer {
+            padding: 22px 28px;
+            border-top: 2px solid var(--gray-200);
+            background: white;
+        }
+        .payment-note {
+            background: var(--blue-soft);
+            border-radius: 20px;
+            padding: 14px;
+            margin-bottom: 18px;
+            font-size: 0.85rem;
+            color: var(--gray-800);
+            border: 1px solid rgba(30,58,138,0.2);
+        }
+        .bank-details-card {
+            background: var(--blue-soft);
+            border-left: 5px solid var(--primary-blue);
+            padding: 16px;
+            border-radius: 20px;
+            margin: 15px 0;
+            font-size: 0.9rem;
+        }
+        .star-rating {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin: 12px 0;
+        }
+        .star {
+            font-size: 1.9rem;
+            cursor: pointer;
+            color: var(--gray-300);
+            transition: 0.2s;
+        }
+        .star.active, .star:hover {
+            color: var(--primary-blue) !important;
+        }
+        .receipt-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        #customAlert {
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-20px);
+            background: var(--primary-blue);
+            color: white;
+            border-left: 5px solid var(--whatsapp-green);
+            padding: 12px 26px;
+            border-radius: 60px;
+            z-index: 3000;
+            display: none;
+            font-weight: 600;
+            backdrop-filter: blur(8px);
+            white-space: nowrap;
+            font-size: 0.85rem;
+        }
+        .footer {
+            background: var(--pure-black);
+            color: var(--gray-300);
+            padding: 40px 0 30px;
+            text-align: center;
+        }
+        .footer .logo {
+            justify-content: center;
+            margin-bottom: 12px;
+            color: white;
+        }
+        .footer .logo-text span {
+            color: var(--blue-soft);
+        }
+        .footer .logo-img {
+            border-color: var(--blue-soft);
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .contact-wrap { grid-template-columns: 1fr; }
+            .hero { padding-top: 110px; }
+            #customAlert { white-space: normal; width: 85%; text-align: center; }
+            .flavor-img { height: 190px; }
+            .logo-img { height: 44px; width: 44px; }
+            .logo { font-size: 1.3rem; gap: 8px; }
+        }
+        @media (max-width: 480px) {
+            .title-lg { font-size: 1.8rem; }
+        }
+        .placeholder-img {
+            background: var(--gray-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            font-size: 2rem;
+            color: var(--primary-blue);
+        }
+        @media print {
+            body * { visibility: hidden; }
+            .print-receipt, .print-receipt * { visibility: visible; }
+            .print-receipt { position: fixed; top: 0; left: 0; width: 100%; padding: 20px; background: white; }
+            .no-print { display: none; }
+        }
+        .print-receipt { display: none; }
+        .print-receipt.active { display: block; }
+    </style>
+</head>
+<body>
+    <div id="customAlert">✓ Added to cart</div>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <img src="Logo.jpeg" alt="Kings Atchar Logo" class="logo-img" onerror="this.onerror=null; this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin', '<i class=\"fas fa-crown\" style=\"font-size: 2rem; color: var(--primary-blue); border-radius: 50%; background: white; padding: 6px;\"></i>
+                <span class="logo-text">Kings<span>Atchar</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#flavors">Flavors</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div style="display: flex; gap: 15px;">
+                <div class="cart-icon-wrapper" id="cartIconBtn">
+                    <i class="fas fa-shopping-bag" style="font-size: 1.3rem;"></i>
+                    <span class="cart-count" id="cartCountBadge">0</span>
+                </div>
+                <a href="tel:0665424390" class="btn btn-outline btn-sm"><i class="fas fa-phone"></i> Call</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO section with clean branding -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-tags">
+                <span class="tag"><i class="fas fa-crown"></i> Royal Crunch</span>
+                <span class="tag"><i class="fas fa-certificate"></i> Artisan Recipe</span>
+                <span class="tag"><i class="fas fa-truck"></i> Nationwide</span>
+            </div>
+            <h1 class="title-lg">Kings Atchar.<br><span style="color: var(--primary-blue);"></span></h1>
+            <p style="margin-bottom: 35px; color: var(--gray-600);">Premium quality · WhatsApp green for instant orders</p>
+            <div class="hero-actions" style="display: flex; gap: 15px; justify-content: center;">
+                <a href="#flavors" class="btn btn-primary"><i class="fas fa-utensils"></i> Explore Menu</a>
+                <a href="https://wa.me/27617250769" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> Chat</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="flavors" class="section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <span class="title-sm">Premium Atchar</span>
+                <h2 class="title-lg">Our <span style="color: var(--primary-blue);">Signature</span> Lineup</h2>
+            </div>
+            <div class="flavor-grid" id="flavorGrid">
+                <div class="flavor-card" data-flavor-name="Garlic King">
+                    <div class="flavor-img"><img src="Garlic.jpeg" alt="Garlic" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-img\'><i class=\'fas fa-garlic\'></i> Garlic King</div>'"><span class="flavor-badge"><i class="fas fa-star"></i> Best Seller</span></div>
+                    <div class="flavor-info"><h3>Garlic King</h3><p>Roasted garlic & crisp mango.</p><div class="size-pills"><div class="pill active" data-price="15">Small</div><div class="pill" data-price="30">Medium</div><div class="pill" data-price="50">Large</div></div><div class="card-footer"><span class="price-tag">R15</span><button class="btn btn-primary btn-cart add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button></div></div>
+                </div>
+                <div class="flavor-card" data-flavor-name="Fire Chilli">
+                    <div class="flavor-img"><img src="Chilli.jpeg" alt="Chilli" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-img\'><i class=\'fas fa-pepper-hot\'></i> Fire Chilli</div>'"><span class="flavor-badge"><i class="fas fa-fire"></i> Extra Hot</span></div>
+                    <div class="flavor-info"><h3>Fire Chilli</h3><p>Bold, spicy, fiery kick.</p><div class="size-pills"><div class="pill active" data-price="15">Small</div><div class="pill" data-price="30">Medium</div><div class="pill" data-price="50">Large</div></div><div class="card-footer"><span class="price-tag">R15</span><button class="btn btn-primary btn-cart add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button></div></div>
+                </div>
+                <div class="flavor-card" data-flavor-name="Royal Classic">
+                    <div class="flavor-img"><img src="Neutral.jpeg" alt="Classic" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-img\'><i class=\'fas fa-crown\'></i> Royal Classic</div>'"><span class="flavor-badge"><i class="fas fa-shield-alt"></i> Venda Spice</span></div>
+                    <div class="flavor-info"><h3>Royal Classic</h3><p>Traditional Venda spices.</p><div class="size-pills"><div class="pill active" data-price="15">Small</div><div class="pill" data-price="30">Medium</div><div class="pill" data-price="50">Large</div></div><div class="card-footer"><span class="price-tag">R15</span><button class="btn btn-primary btn-cart add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-wrap">
+                <div class="contact-info">
+                    <h2 class="title-lg" style="color: white;">Get in <span style="color: #B9E0FF;">Touch</span></h2>
+                    <p style="margin-bottom: 40px; opacity:0.85;">Bulk orders & custom requests.</p>
+                    <div class="contact-item" style="display: flex; gap: 15px; align-items: center;"><div class="contact-icon" style="background:rgba(255,255,255,0.15); border-radius:16px; padding:12px;"><i class="fas fa-phone-volume"></i></div><div><p style="font-size:0.7rem; opacity:0.7;">Call for Orders</p><p>066 542 4390</p></div></div>
+                    <div class="contact-item" style="display: flex; gap: 15px; align-items: center; margin-top:20px;"><div class="contact-icon" style="background:rgba(255,255,255,0.15); border-radius:16px; padding:12px;"><i class="fab fa-whatsapp"></i></div><div><p style="font-size:0.7rem; opacity:0.7;">WhatsApp Orders</p><p>066 541 4390</p></div></div>
+                </div>
+                <div class="contact-form"><form id="contactForm"><div class="form-group"><label>Full Name</label><input type="text" id="contactName" class="form-input" required></div><div class="form-group"><label>Message</label><textarea id="contactMsg" class="form-input" rows="3" required></textarea></div><button type="submit" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Send Inquiry</button></form></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="logo" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+            <img src="Logo.jpeg" alt="Kings Atchar Logo" class="logo-img" style="height: 48px; width: 48px; border: 2px solid #DBEAFE;" onerror="this.onerror=null; this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin', '<i class=\"fas fa-crown\" style=\"font-size: 2rem; color: #DBEAFE;\"></i>
+            <span class="logo-text" style="color: white;">Kings<span style="color:#8BB5FF;">Atchar</span></span>
+        </div>
+        <p>© 2026 Kings Atchar —WhatsApp  " Kings Atchar " for instant connection.</p>
+    </footer>
+
+    <div id="printReceiptTemplate" class="print-receipt"></div>
+
+    <div class="modal-cart" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header"><h3><i class="fas fa-shopping-cart"></i> Your Cart</h3><button id="closeCartBtn" style="background: none; border: none; font-size: 1.8rem; cursor: pointer;">&times;</button></div>
+            <div class="cart-items" id="cartItemsList"><div class="empty-cart-msg">🛒 Cart is empty</div></div>
+            <div class="cart-footer" id="cartFooter">
+                <div id="prePaymentArea">
+                    <div class="payment-note"><i class="fas fa-info-circle"></i> <strong>Order via WhatsApp & bank transfer.</strong> After placing, you'll get PDF receipt.</div>
+                    <input type="text" id="checkoutName" class="form-input" placeholder="Full Name *" style="margin-bottom: 12px;">
+                    <input type="tel" id="checkoutPhone" class="form-input" placeholder="Phone Number * (for receipt)" style="margin-bottom: 12px;">
+                    <textarea id="checkoutAddress" class="form-input" rows="2" placeholder="Delivery address (optional)"></textarea>
+                    <button id="placeOrderPayBtn" class="btn btn-whatsapp" style="width:100%; margin: 12px 0;"><i class="fab fa-whatsapp"></i> Place Order via WhatsApp</button>
+                    <button id="clearCartBtn" class="btn btn-outline" style="width:100%;">Clear Cart</button>
+                </div>
+                <div id="receiptFeedbackArea" style="display: none;">
+                    <div class="bank-details-card">
+                        <i class="fas fa-university"></i> <strong>🏦 Bank Transfer</strong><br>
+                        Account: <strong>2277615443</strong><br>
+                        Support WhatsApp: <strong>066 541 4390</strong><br>
+                        Reference: <strong>Order ID (in receipt)</strong>
+                    </div>
+                    <div class="receipt-actions">
+                        <button id="downloadPdfBtn" class="btn btn-primary btn-sm"><i class="fas fa-download"></i> PDF Receipt</button>
+                        <button id="shareReceiptWhatsAppBtn" class="btn btn-whatsapp btn-sm"><i class="fab fa-whatsapp"></i> Send Receipt</button>
+                    </div>
+                    <div class="feedback-area">
+                        <div style="font-weight:700; margin-bottom:8px;">❤️ Love our atchar? Leave feedback</div>
+                        <div class="star-rating" id="starRatingWidget">
+                            <i class="far fa-star star" data-rating="1"></i><i class="far fa-star star" data-rating="2"></i>
+                            <i class="far fa-star star" data-rating="3"></i><i class="far fa-star star" data-rating="4"></i>
+                            <i class="far fa-star star" data-rating="5"></i>
+                        </div>
+                        <textarea id="feedbackComment" class="form-input" rows="2" placeholder="Share your experience..."></textarea>
+                        <button id="submitFeedbackBtn" class="btn btn-primary btn-sm" style="width:100%; margin-top: 8px;"><i class="fas fa-smile"></i> Submit Feedback</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            let cart = [];
+            let lastOrderData = null;
+            let orderCompleted = false;
+            let selectedRating = 0;
+            const OWNER_WHATSAPP = "2766154390";
+
+            const cartModal = document.getElementById('cartModal');
+            const cartItemsContainer = document.getElementById('cartItemsList');
+            const cartCountBadge = document.getElementById('cartCountBadge');
+            const cartIconBtn = document.getElementById('cartIconBtn');
+            const closeCartBtn = document.getElementById('closeCartBtn');
+            const clearCartBtn = document.getElementById('clearCartBtn');
+            const placeOrderBtn = document.getElementById('placeOrderPayBtn');
+            const prePaymentArea = document.getElementById('prePaymentArea');
+            const receiptFeedbackArea = document.getElementById('receiptFeedbackArea');
+            const downloadPdfBtn = document.getElementById('downloadPdfBtn');
+            const shareReceiptWhatsAppBtn = document.getElementById('shareReceiptWhatsAppBtn');
+            const submitFeedbackBtn = document.getElementById('submitFeedbackBtn');
+            const starWidget = document.getElementById('starRatingWidget');
+            const contactForm = document.getElementById('contactForm');
+            const printTemplate = document.getElementById('printReceiptTemplate');
+
+            function showAlert(msg, isError = false) {
+                const alertDiv = document.getElementById('customAlert');
+                alertDiv.style.display = 'block';
+                alertDiv.textContent = msg;
+                alertDiv.style.borderLeftColor = isError ? '#dc2626' : '#25D366';
+                setTimeout(() => alertDiv.style.display = 'none', 2400);
+            }
+            function saveCart() { localStorage.setItem('kingsAtcharCart', JSON.stringify(cart)); updateCartBadge(); renderCartUI(); resetOrderStateIfCartChanges(); }
+            function updateCartBadge() { const totalItems = cart.reduce((sum, i) => sum + i.quantity, 0); cartCountBadge.innerText = totalItems; }
+            function resetOrderStateIfCartChanges() { if(orderCompleted && cart.length > 0) { orderCompleted = false; lastOrderData = null; if(prePaymentArea) prePaymentArea.style.display = 'block'; if(receiptFeedbackArea) receiptFeedbackArea.style.display = 'none'; showAlert("New items added – ready for fresh order"); } if(cart.length === 0 && orderCompleted) { orderCompleted = false; lastOrderData = null; if(prePaymentArea) prePaymentArea.style.display = 'block'; if(receiptFeedbackArea) receiptFeedbackArea.style.display = 'none'; } }
+
+            function addToCart(flavor, size, unitPrice) {
+                if(orderCompleted) { showAlert("Previous order completed! Start fresh cart.", true); return; }
+                const existing = cart.find(item => item.flavor === flavor && item.size === size);
+                if (existing) existing.quantity += 1;
+                else cart.push({ id: Date.now() + Math.random(), flavor, size, unitPrice, quantity: 1 });
+                saveCart();
+                showAlert(`✓ ${flavor} (${size}) added - R${unitPrice}`);
+            }
+            function removeItem(id) { cart = cart.filter(i => i.id !== id); saveCart(); }
+            function updateQty(id, delta) { const item = cart.find(i => i.id === id); if(item) { item.quantity += delta; if(item.quantity <= 0) removeItem(id); else saveCart(); } }
+
+            function generateOrderText(cartArray, customerName, customerPhone, address) {
+                let itemsText = ''; let total = 0;
+                cartArray.forEach(item => { const sub = item.unitPrice * item.quantity; total += sub; itemsText += `${item.flavor} (${item.size}) x${item.quantity} = R${sub}\n`; });
+                return `🛒 KINGS ATCHAR ORDER 🛒\n━━━━━━━━━━━━━━━━\n👤 Name: ${customerName}\n📞 Phone: ${customerPhone}\n📍 Address: ${address || 'Not provided'}\n\n${itemsText}\n━━━━━━━━━━━━━━━━\n💰 TOTAL: R${total}\n\n🔁 Please complete bank transfer & share proof.`;
+            }
+
+            function generateReceiptHTML(orderData) {
+                const { orderId, date, customerName, customerPhone, address, items, total } = orderData;
+                let itemsHtml = '';
+                items.forEach(item => { itemsHtml += `<tr><td>${escapeHtml(item.flavor)} (${item.size})</td><td>x${item.quantity}</td><td>R${item.unitPrice}NonNulled<td>R${item.unitPrice * item.quantity}NonNulled</tr>`; });
+                return `<div style="font-family: 'Plus Jakarta Sans', sans-serif; max-width: 600px; margin:0 auto; padding:20px; border:1px solid #1E3A8A; border-radius:20px; background:#fff;"><div style="text-align:center;"><img src="Logo.jpeg" style="height:60px; width:60px; border-radius:50%; object-fit:cover; margin-bottom:10px; border:2px solid #1E3A8A;" onerror="this.style.display='none'"><h2 style="font-family:'Playfair Display'; color:#1E3A8A;">KINGS ATCHAR</h2></div><h3>🧾 ORDER RECEIPT</h3><p><strong>Order ID:</strong> ${orderId}</p><p><strong>Date:</strong> ${date}</p><p><strong>Customer:</strong> ${escapeHtml(customerName)}</p><p><strong>Phone:</strong> ${customerPhone}</p><p><strong>Address:</strong> ${address || 'Not provided'}</p><table style="width:100%; border-collapse:collapse;"><thead><tr style="background:#DBEAFE;"><th>Item</th><th>Qty</th><th>Unit</th><th>Subtotal</th></tr></thead><tbody>${itemsHtml}</tbody><tfoot><tr><td colspan="3" style="text-align:right; font-weight:bold;">TOTAL</td><td style="font-weight:bold;">R${total}</td></tr></tfoot></table><div style="background:#F0F5FF; padding:15px; border-radius:16px; margin-top:15px;"><strong>💳 BANK TRANSFER</strong><br>Account: 2277615443<br>Reference: ${orderId}<br>WhatsApp support: 066 541 4390</div><p style="text-align:center;">Thank you for choosing Kings Atchar 👑</p></div>`;
+            }
+
+            async function placeOrderViaWhatsApp() {
+                if(cart.length === 0) { showAlert("Cart is empty", true); return; }
+                const customerName = document.getElementById('checkoutName').value.trim();
+                const customerPhone = document.getElementById('checkoutPhone').value.trim();
+                if(!customerName || !customerPhone) { showAlert("Please enter name & phone number", true); return; }
+                const address = document.getElementById('checkoutAddress').value.trim();
+                const items = cart.map(i => ({ flavor: i.flavor, size: i.size, quantity: i.quantity, unitPrice: i.unitPrice }));
+                const total = items.reduce((s,i) => s + (i.unitPrice * i.quantity), 0);
+                const orderId = `KA${Math.floor(Math.random()*10000)}-${Date.now().toString().slice(-4)}`;
+                const date = new Date().toLocaleString();
+                const orderData = { orderId, date, customerName, customerPhone, address, items, total };
+                const orderText = generateOrderText(cart, customerName, customerPhone, address);
+                window.open(`https://wa.me/${OWNER_WHATSAPP}?text=${encodeURIComponent(orderText)}`, '_blank');
+                lastOrderData = orderData;
+                cart = [];
+                saveCart();
+                orderCompleted = true;
+                prePaymentArea.style.display = 'none';
+                receiptFeedbackArea.style.display = 'block';
+                printTemplate.innerHTML = generateReceiptHTML(orderData);
+                printTemplate.classList.add('active');
+                renderCartUI();
+                showAlert(`✅ Order sent to owner! Order ID: ${orderId}. Receipt ready.`);
+            }
+
+            function downloadPdfReceipt() { if(!lastOrderData) { showAlert("Place an order first", true); return; } printTemplate.classList.add('active'); window.print(); showAlert("📄 PDF ready: use 'Save as PDF'", false); }
+            function sendReceiptToCustomer() { if(!lastOrderData) { showAlert("No order", true); return; } const custPhone = lastOrderData.customerPhone.replace(/\D/g,''); if(!custPhone) { showAlert("Customer phone missing", true); return; } const receiptText = `🧾 Kings Atchar Receipt\nOrder: ${lastOrderData.orderId}\nTotal: R${lastOrderData.total}\nBank: 2277615443 | Ref: ${lastOrderData.orderId}`; window.open(`https://wa.me/${custPhone}?text=${encodeURIComponent(receiptText)}`, '_blank'); showAlert("Receipt shared via WhatsApp", false); }
+
+            function initStarRating() { if(!starWidget) return; const stars = starWidget.querySelectorAll('.star'); stars.forEach(star => { star.removeEventListener('click', starClickHandler); star.addEventListener('click', starClickHandler); }); }
+            function starClickHandler(e) { const rating = parseInt(this.dataset.rating); selectedRating = rating; const stars = starWidget.querySelectorAll('.star'); stars.forEach(s => { const val = parseInt(s.dataset.rating); if(val <= rating) { s.classList.remove('far'); s.classList.add('fas'); s.style.color = "#1E3A8A"; } else { s.classList.remove('fas'); s.classList.add('far'); s.style.color = "#ccc"; } }); }
+            function submitFeedback() { if(selectedRating === 0) { showAlert("Select a star rating", true); return; } showAlert(`🙏 Thank you for ${selectedRating} stars!`, false); document.getElementById('feedbackComment').value = ''; selectedRating = 0; const stars = starWidget.querySelectorAll('.star'); stars.forEach(s => { s.classList.remove('fas'); s.classList.add('far'); s.style.color = "#ccc"; }); }
+
+            function renderCartUI() {
+                if(!cartItemsContainer) return;
+                if(cart.length === 0 && !orderCompleted) { cartItemsContainer.innerHTML = '<div class="empty-cart-msg">🛒 Your cart is empty.</div>'; if(prePaymentArea) prePaymentArea.style.display = 'block'; if(receiptFeedbackArea) receiptFeedbackArea.style.display = 'none'; return; }
+                if(cart.length === 0 && orderCompleted && lastOrderData) { cartItemsContainer.innerHTML = '<div class="empty-cart-msg">✅ Order placed! Receipt ready below.</div>'; prePaymentArea.style.display = 'none'; receiptFeedbackArea.style.display = 'block'; return; }
+                if(cart.length > 0 && orderCompleted) { orderCompleted = false; lastOrderData = null; prePaymentArea.style.display = 'block'; receiptFeedbackArea.style.display = 'none'; }
+                if(cart.length > 0 && !orderCompleted) {
+                    prePaymentArea.style.display = 'block'; receiptFeedbackArea.style.display = 'none';
+                    let total = 0; let html = '';
+                    cart.forEach(item => { const sub = item.unitPrice * item.quantity; total += sub; html += `<div class="cart-item"><div class="item-details"><div class="item-name">${escapeHtml(item.flavor)}</div><div class="item-meta">${item.size} · R${item.unitPrice}</div></div><div class="item-actions"><div class="qty-control"><button class="qty-minus" data-id="${item.id}">−</button><span>${item.quantity}</span><button class="qty-plus" data-id="${item.id}">+</button></div><button class="remove-item" data-id="${item.id}"><i class="fas fa-trash-alt"></i></button></div><div><strong>R${sub}</strong></div></div>`; });
+                    cartItemsContainer.innerHTML = html;
+                    cartItemsContainer.querySelectorAll('.qty-minus').forEach(btn => btn.addEventListener('click', (e) => updateQty(Number(btn.dataset.id), -1)));
+                    cartItemsContainer.querySelectorAll('.qty-plus').forEach(btn => btn.addEventListener('click', (e) => updateQty(Number(btn.dataset.id), 1)));
+                    cartItemsContainer.querySelectorAll('.remove-item').forEach(btn => btn.addEventListener('click', (e) => removeItem(Number(btn.dataset.id))));
+                }
+            }
+            function escapeHtml(str) { return str.replace(/[&<>]/g, function(m){ if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;}); }
+            function openCartModal() { cartModal.classList.add('active'); document.body.style.overflow = 'hidden'; renderCartUI(); initStarRating(); }
+            function closeCartModal() { cartModal.classList.remove('active'); document.body.style.overflow = ''; }
+
+            document.getElementById('flavorGrid')?.addEventListener('click', (e) => {
+                const addBtn = e.target.closest('.add-to-cart-btn'); if(!addBtn) return;
+                const card = addBtn.closest('.flavor-card'); if(!card) return;
+                const flavorName = card.querySelector('h3')?.innerText;
+                const activePill = card.querySelector('.pill.active');
+                if(!activePill) return;
+                const size = activePill.innerText;
+                const priceSpan = card.querySelector('.price-tag');
+                let price = 15;
+                if(priceSpan) { const priceText = priceSpan.innerText.replace('R',''); price = parseInt(priceText,10); if(isNaN(price)) price=15; }
+                if(flavorName && size) addToCart(flavorName, size, price);
+            });
+            document.querySelectorAll('.flavor-card').forEach(card => {
+                const pills = card.querySelectorAll('.pill'); const priceSpan = card.querySelector('.price-tag');
+                pills.forEach(pill => pill.addEventListener('click', () => { pills.forEach(p=>p.classList.remove('active')); pill.classList.add('active'); const np = pill.getAttribute('data-price'); if(np && priceSpan) priceSpan.innerText = 'R'+np; }));
+            });
+            cartIconBtn?.addEventListener('click', openCartModal); closeCartBtn?.addEventListener('click', closeCartModal); cartModal?.addEventListener('click', (e) => { if(e.target === cartModal) closeCartModal(); });
+            clearCartBtn?.addEventListener('click', () => { if(cart.length && confirm('Clear cart?')) { cart = []; orderCompleted = false; lastOrderData = null; saveCart(); renderCartUI(); prePaymentArea.style.display = 'block'; receiptFeedbackArea.style.display = 'none'; showAlert('Cart cleared'); } });
+            placeOrderBtn?.addEventListener('click', placeOrderViaWhatsApp);
+            downloadPdfBtn?.addEventListener('click', downloadPdfReceipt);
+            shareReceiptWhatsAppBtn?.addEventListener('click', sendReceiptToCustomer);
+            submitFeedbackBtn?.addEventListener('click', submitFeedback);
+            contactForm?.addEventListener('submit', (e) => { e.preventDefault(); const name = document.getElementById('contactName').value.trim(); const msg = document.getElementById('contactMsg').value.trim(); if(!name || !msg) { showAlert('Fill both fields', true); return; } window.open(`https://wa.me/27617250769?text=${encodeURIComponent(`Kings Atchar Inquiry\nName: ${name}\nMessage: ${msg}`)}`, '_blank'); showAlert('Opened in WhatsApp'); contactForm.reset(); });
+            const saved = localStorage.getItem('kingsAtcharCart'); if(saved) { try { cart = JSON.parse(saved); } catch(e){} } renderCartUI(); updateCartBadge();
+            document.querySelectorAll('.flavor-card').forEach(card => { const active = card.querySelector('.pill.active'); const priceSpan = card.querySelector('.price-tag'); if(active && priceSpan) priceSpan.innerText = 'R'+active.getAttribute('data-price'); });
+        })();
+    </script>
+</body>
+</html>
